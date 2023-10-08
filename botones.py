@@ -5,18 +5,25 @@ WIDTH = 800
 HEIGHT = 500
 
 black = (0, 0, 0)
-
+#Boton para jugar
 Button_Play = pygame.image.load("Botones/Frame 3.png")
 Button_Play_mouse = pygame.image.load("Botones/Frame 4.png")
-
+#Boton para ver el score
 Button_score = pygame.image.load("Botones/Frame 1.png")
 Button_score_mouse = pygame.image.load("Botones/Frame 2.png")
-
+#Boton para ver la ayuda
 Button_help = pygame.image.load("Botones/Frame 5.png")
 Button_help_mouse = pygame.image.load("Botones/Frame 6.png")
-
+#Boton para salir
 Button_exit = pygame.image.load("Botones/Frame 7.png")
 Button_exit_mouse = pygame.image.load("Botones/Frame 8.png")
+
+#Boton para ingresar al usuario
+image_user = pygame.image.load("Botones/Frame 9.png")
+Button_user_ok = pygame.image.load("Botones/Frame 10.png")
+Button_user_ok_mouse = pygame.image.load("Botones/Frame 11.png")
+
+
 
 
 class Button:
