@@ -13,7 +13,6 @@ black = (0, 0, 0)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 imagen = pygame.image.load("./Main/power racing.png").convert()
 
-
 game = True
 while game:
     for event in pygame.event.get():
