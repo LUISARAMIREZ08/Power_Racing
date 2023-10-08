@@ -1,14 +1,9 @@
 import pygame
 import sys
-from Load_Images.imagenes import *
-
+from Load_Images.images import *
 
 WIDTH = 800
 HEIGHT = 500
-
-black = (0, 0, 0)
-
-
 
 class Button:
     def __init__(self, x, y, normal_image, hover_image):
