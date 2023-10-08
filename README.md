@@ -1,2 +1,2 @@
 ﻿# Power_Racing
-Juego de carros hecho en Python haciendo uso de la libreria pygame
+juego de carros desarrollado en Python utilizando la librería Pygame
