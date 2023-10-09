@@ -27,7 +27,7 @@ class Player(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
 
     def move_right(self, pixels):
-        if self.rect.x < 550:
+        if self.rect.x < 570:
             self.rect.x += pixels
 
     def move_left(self,pixels):
@@ -53,6 +53,7 @@ class Player(pygame.sprite.Sprite):
                 self.move_right(Settings.car_speed)
             if event.key == pygame.K_LEFT:
                 self.move_left(Settings.car_speed)
+
 
 player = Player()
 all_sprites = pygame.sprite.Group()
@@ -85,7 +86,7 @@ class enemy_car(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
     
     def move(self):
-        if self.rect.x < 650:
+        if self.rect.x < 600:
             self.rect.y += Settings.car_speed
         else:
             self.kill()
@@ -125,7 +126,7 @@ def crash(value):
         print("GAME OVER")
         sys.exit()
 
-#LOGICA DEL JUEGO
+
 def main_juego():
     game_over = False
 
