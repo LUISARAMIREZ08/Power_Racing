@@ -1,9 +1,10 @@
 import pygame
 import sys
+from Load_Images.images import *
+from botones import *
+from Submenu import *
 
 pygame.init()
-
-from botones import * 
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 500
@@ -11,24 +12,23 @@ SCREEN_HEIGHT = 500
 black = (0, 0, 0)
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-imagen = pygame.image.load("./Main/power racing.png").convert()
+
+submenu = Submenu()
 
 game = True
 while game:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
-            
-        for button in buttons:
-            button.process_events(event)
+        #Eventos de la pantalla actual
+        submenu.process_events_submenu(event)
 
-    screen.blit(imagen, [0, 0])
+    # Dibuja el fondo y los botones de la pantalla actual
+    submenu.draw_submenu(screen)
 
-    for button in buttons:
-        button.update()
-        screen.blit(button.image, (button.x, button.y))
+    # Actualiza los botones de la pantalla actual
+    submenu.update_submenu()
 
     pygame.display.flip()
 
 pygame.quit()
-
