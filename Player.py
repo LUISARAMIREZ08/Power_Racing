@@ -125,8 +125,6 @@ def crash(value):
         print("GAME OVER")
         sys.exit()
 
-
-
 #LOGICA DEL JUEGO
 def main_juego():
     game_over = False
