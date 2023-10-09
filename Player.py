@@ -54,7 +54,6 @@ class Player(pygame.sprite.Sprite):
             if event.key == pygame.K_LEFT:
                 self.move_left(Settings.car_speed)
 
-
 player = Player()
 all_sprites = pygame.sprite.Group()
 all_sprites.add(player)
@@ -101,6 +100,13 @@ class enemy_car(pygame.sprite.Sprite):
             all_sprites.add(enemy)
             enemy_sprites.add(enemy)
 
+    def collision(self):
+        car_collision_list = pygame.sprite.spritecollide(player,enemy_sprites,False,pygame.sprite.collide_mask)
+        if car_collision_list:
+            crash(True)
+        else:
+            crash(False)
+
 
 aux = False
 collision_count = 0
@@ -118,6 +124,7 @@ def crash(value):
     if collision_count >= Settings.num_vidas:
         print("GAME OVER")
         sys.exit()
+
 
 
 #LOGICA DEL JUEGO
@@ -139,11 +146,8 @@ def main_juego():
             enemy.move()
 
         #Colisiones
-        car_collision_list = pygame.sprite.spritecollide(player,enemy_sprites,False,pygame.sprite.collide_mask)
-        if car_collision_list:
-            crash(True)
-        else:
-            crash(False)
+        for enemy in enemy_sprites:
+            enemy.collision()
         
         screen_size.blit(background, (0, 0))
 
