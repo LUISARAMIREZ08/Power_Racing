@@ -1,6 +1,6 @@
 import pygame
 import sys
-from Load_Images.images import *
+from Load_Images_sprites.images import *
 
 class Button:
     def __init__(self, x, y, normal_image, hover_image):

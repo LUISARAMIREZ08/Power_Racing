@@ -1,5 +1,6 @@
 import pygame
 
+#CARGA DE IMAGENES DEL JUEGO PARA EL MENU PRINCIPAL,SUBMENUS Y BOTONES
 #Menu principal
 Main = pygame.image.load("./Main/power racing.png")
 

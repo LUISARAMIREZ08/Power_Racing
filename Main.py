@@ -1,6 +1,6 @@
 import pygame
 import sys
-from Load_Images.images import *
+from Load_Images_sprites.images import *
 from botones import *
 from Submenu import *
 
