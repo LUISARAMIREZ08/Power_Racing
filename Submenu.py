@@ -1,5 +1,5 @@
 import pygame
-from Load_Images.images import *
+from Load_Images_sprites.images import *
 from botones import *
 
 class Submenu:

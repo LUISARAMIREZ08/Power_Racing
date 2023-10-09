@@ -1,6 +1,7 @@
 import pygame
 import sys
 
+#configuracion del juego
 class Settings:
     def __init__(self):
         self.car_width = 30
