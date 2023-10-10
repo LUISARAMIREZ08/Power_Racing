@@ -1,0 +1,10 @@
+Consideraciones:
+
+- Modular todo el programa
+- Navegación a utilizar (Jense)
+- Implementar Sonido
+- Implementar sistema de guardado de puntaje
+- Implementar juego(Luisa está trabajando en eso)
+- Implementar sistema de selección de personaje y Mundo
+- Implementar habilidades especiales
+- Implementar mensaje "Game Over"
