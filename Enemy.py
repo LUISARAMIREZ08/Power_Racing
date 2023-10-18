@@ -3,11 +3,11 @@ import sys
 import random
 import pygame.mask
 
-from Load_Images_sprites.Load_sprites import *
 from pygame.sprite import *
 from player_settings import *
 from crash import *
 from Player import *
+
 class enemy_car(pygame.sprite.Sprite):
     def __init__(self, bad,lane):
         super().__init__()
@@ -15,15 +15,15 @@ class enemy_car(pygame.sprite.Sprite):
         self.lane = lane
 
         if self.bad == 1:
-            self.image = enemy_modern_blue
+            self.image = pygame.image.load("sprites/modern_blue.png").convert_alpha()
         elif self.bad == 2:
-            self.image = enemy_super_cyan
+            self.image = pygame.image.load("sprites/super_cyan.png").convert_alpha()    
         elif self.bad == 3:
-            self.image = enemy_kar_pink
+            self.image = pygame.image.load("sprites/kar_pink.png").convert_alpha()
         elif self.bad == 4:
-            self.image = enemy_modern_green
+            self.image = pygame.image.load("sprites/modern_green.png").convert_alpha()
         else:
-            self.image = enemy_modern_pink
+            self.image = pygame.image.load("sprites/modern_pink.png").convert_alpha()
 
         self.rect = self.image.get_rect()
         self.image = pygame.transform.scale(self.image, (Settings.car_width, Settings.car_height))

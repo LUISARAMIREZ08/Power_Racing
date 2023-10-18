@@ -13,7 +13,6 @@ from Load_Images_sprites.Load_sprites import *
 from pygame.sprite import *
 from player_settings import *
 
-
 Settings = Settings()
 
 class Player(pygame.sprite.Sprite):
