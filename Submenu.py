@@ -40,6 +40,7 @@ class Submenu:
     def update_submenu(self):
         for button in self.current_buttons:
             button.update()
+            
     #Funcion que dibuja los botones y el fondo
     def draw_submenu(self, screen):
         screen.blit(self.current_background, (0, 0))
